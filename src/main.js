@@ -21,7 +21,7 @@ const getData = async () => {
 
         fs.writeFileSync('./utils/db.json', JSON.stringify(localDB, null, 2));
 
-        await tweet(`${channelName} has just uploaded a new video on YouTube!\nhttps://www.youtube.com/watch?v=${lastUploadId}`)
+        return await tweet(`${channelName} has just uploaded a new video on YouTube!\nhttps://www.youtube.com/watch?v=${lastUploadId}`)
     })
 }
 
